@@ -95,19 +95,19 @@ python qr.py "WIFI:T:WPA;S:GuestNet;P:hunter2;;" -o wifi.png -e Q
 Add a logo in the center. Error correction auto-bumps to `H` so the code stays scannable:
 
 ```bash
-python qr.py "https://maryland.gov" -o branded.png --logo assets/md-logo.svg
+python qr.py "https://maryland.gov" -o branded.png --logo input/maryland-logo.svg
 ```
 
 SVG logo embedded in SVG output stays fully vector — good for print:
 
 ```bash
-python qr.py "https://maryland.gov" -o poster.svg --logo assets/md-logo.svg
+python qr.py "https://maryland.gov" -o poster.svg --logo input/maryland-logo.svg
 ```
 
 Larger logo on a transparent QR, with a matching transparent backing (only works if your logo already has opaque pixels covering the QR modules underneath — otherwise leave `--logo-backing` at its default):
 
 ```bash
-python qr.py "https://maryland.gov" -o hero.svg --logo assets/md-logo.svg \
+python qr.py "https://maryland.gov" -o hero.svg --logo input/maryland-logo.svg \
     --logo-scale 0.26 -b transparent --logo-backing transparent
 ```
 

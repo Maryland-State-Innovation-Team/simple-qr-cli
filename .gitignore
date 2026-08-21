@@ -147,6 +147,9 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
+# CLI output (generated QR codes)
+output/
+
 # Environments
 .env
 .envrc
